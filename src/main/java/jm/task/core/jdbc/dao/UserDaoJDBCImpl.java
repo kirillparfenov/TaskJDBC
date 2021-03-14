@@ -19,12 +19,12 @@ public class UserDaoJDBCImpl implements UserDao {
     public void createUsersTable() {
         try {
             statement = Util.getConnection().createStatement();
-            statement.execute("CREATE TABLE `coretaskdb`.`users` (" +
-                    " `id` BIGINT(20) NOT NULL AUTO_INCREMENT," +
-                    " `name` VARCHAR(45) NOT NULL," +
-                    " `lastname` VARCHAR(45) NOT NULL," +
-                    " `age` TINYINT(3) NOT NULL," +
-                    " PRIMARY KEY (`id`))" +
+            statement.execute("CREATE TABLE coretaskdb.users (" +
+                    " id BIGINT(20) NOT NULL AUTO_INCREMENT," +
+                    " name VARCHAR(45) NOT NULL," +
+                    " lastname VARCHAR(45) NOT NULL," +
+                    " age TINYINT(3) NOT NULL," +
+                    " PRIMARY KEY (id))" +
                     " ENGINE = InnoDB" +
                     " DEFAULT CHARACTER SET = utf8;");
         } catch (SQLException ex){
